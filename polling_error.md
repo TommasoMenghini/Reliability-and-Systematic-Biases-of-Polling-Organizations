@@ -32,6 +32,6 @@ It was also necessary to select a subset of polling agencies, as not all of them
 
 ## Intuition: voters' intention and electoral results
 
-![Testo alternativo](percorso/immagine.png)
+![Average polling error by institute for the 2019, 2022 and 2024 elections](img/scatter_Lega.png)
 
 
