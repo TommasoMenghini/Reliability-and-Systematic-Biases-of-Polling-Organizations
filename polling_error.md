@@ -32,6 +32,16 @@ It was also necessary to select a subset of polling agencies, as not all of them
 
 ## Insight: voters' intention and electoral results
 
+The graph below shows the difference between the electoral outcome and the estimated voters' intentions, obtained from the last available poll prior to the election for each selected agency, focusing on the party Lega.
+Looking closely at the 2019 Europeans, it can be observed that all the discrepancies share the same sign, as they are all positive, and they have similar magnitude. That suggest that there are no significant differences among the eleven selected agencies in terms of reliability.
+
 ![Average polling error by institute for the 2019, 2022 and 2024 elections](img/scatter_Lega.png)
+
+However, the direct use of the difference between the electoral result and the estimated vote share is not appropriate, as it is not comparable across different parties. Indeed, a difference of 5 percentage points for a party polling at 20% is not equivalent to a difference of 5 percentage points for a party polling at 10%. For this reason, the distorsion is formulated as a relative error, which is used as the response variable.
+
+The dataset therefore consists of this response variable and three independent variables: Agency, Party and Election. In total, the dataset contains 165 observations, one for each agency-party-election combination.
+
+
+
 
 
