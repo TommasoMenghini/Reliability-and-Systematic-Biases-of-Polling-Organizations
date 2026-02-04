@@ -22,7 +22,7 @@ The data were made available by YouTrend and consist of pre-election polls condu
 
 Furthermore, during this period four elections were held in Italy: the 2018 general election, the 2019 European Parliament election, the 2022 general election, and the 2024 European Parliament election. The aim of this study is to assess the reliability of each polling agency by evaluating the discrepancy between their predictions and the actual election outcomes.
 
-
+The main references were [Gelman (2021)](https://www.tandfonline.com/doi/full/10.1080/2330443X.2021.1971126) and [Shirani-Mehr et al.(2018)]([https://www.unimib.it/](https://www.tandfonline.com/doi/full/10.1080/01621459.2018.1448823)).
 
 
 
