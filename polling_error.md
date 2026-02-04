@@ -24,6 +24,11 @@ Furthermore, during this period four elections were held in Italy: the 2018 gene
 
 The main references were [Gelman (2021)](https://www.tandfonline.com/doi/full/10.1080/2330443X.2021.1971126) and [Shirani-Mehr et al.(2018)](https://www.tandfonline.com/doi/full/10.1080/01621459.2018.1448823).
 
+## Data Cleansing
+
+It is well known that the italian political context is highly fragmented. This volatility makes it difficult to mantain a homogeneous set of political subjects over the entire period of analysis. For this reason, I decided to focus on a restricted, yet stable, set of political actors: Fratelli d'Italia, Forza Italia, Lega, Movimento 5 Stelle and Partito Democratico. These represented the main political parties in Italy throughout the period under analysis.
+
+It was also necessary to select a subset of polling agencies, as not all of them provided a regular and sufficiently long time series. Keep in mind that the analysis requires to build a balanced setting in which there are the same number of election-party combination for each agency. Therefore I decided to restrict to only those agencies with at least one observation prior to the 2019 and 2024 Europeans and the 2022 Politics, and that guaranteed a number of published polls sufficiently large.
 
 
 
