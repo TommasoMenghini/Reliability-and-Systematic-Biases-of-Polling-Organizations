@@ -30,7 +30,7 @@ It is well known that the italian political context is highly fragmented. This v
 
 It was also necessary to select a subset of polling agencies, as not all of them provided a regular and sufficiently long time series. Keep in mind that the analysis requires to build a balanced setting in which there are the same number of election-party combination for each agency. Therefore I decided to restrict to only those agencies with at least one observation prior to the 2019 and 2024 Europeans and the 2022 Politics, and that guaranteed a number of published polls sufficiently large.
 
-## Intuition: voters' intention and electoral results
+## Insight: voters' intention and electoral results
 
 ![Average polling error by institute for the 2019, 2022 and 2024 elections](img/scatter_Lega.png)
 
