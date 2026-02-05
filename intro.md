@@ -49,4 +49,4 @@ In the file []() is shown how to collect those estimates up to the day of the el
 
 ## The Error Analysis
 
-The error analysis examines both systematic biases and predictive accuracy of polling agencies across parties and elections. The full analysis is documented in a separate Markdown file in this repository [](), where the final results are discussed in detail.
+The error analysis examines both systematic biases and predictive accuracy of polling agencies across parties and elections. The full analysis is documented in a separate Markdown file in this repository [polling_error.md](polling_error.md), where the final results are discussed in detail.
