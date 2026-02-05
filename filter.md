@@ -80,6 +80,7 @@ final.swg <- KF.sond(data, Sond = "swg")
 plt <- final.swg$PD$plots[[1]]
 ```
 
+![SWG - PD - 2019 Europeans](img/swg_PD_1.png)
 
 
 
