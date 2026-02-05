@@ -28,11 +28,42 @@ To address this issue, a binomial state-space model is implemented, in which vot
 
 Specifically the logit-transformed voters' intentions of tomorrow are modelled as the logit of today plus a random shock and an additional component that follows a random walk. This dynamic structure is flexible yet regual enough to allow for the imputation of days without polls by exploiting the information contained in the previous days.
 
+## Computing the Filtered Estimates
+
+This section illustrates how the filtered estimate is obtained for a single agency–party–election combination, namely SWG – PD – 2019 European elections. Some R code is also provided for illustrative purposes; however, it is not directly replicable, as the underlying data are not available in this repository.
+
+This chunk of code initializes a clean R session and loads the useful dplyr package for data manipulation. The function KF.sond() is defined, which is a wrapper fucntion that applies the Kalman filtering procedure to polling data for a given polling agency.
+
+The function takes as input a dataset and the name of a polling agency. For each party present in the data, it calls the function KF.part.sond(), which performs the Kalman filter for a specific party–agency combination. The filtered results are stored in a list, with one element per party, and returned as output.
+
+Finally, the script sources two external R files: [filter_function.R](), which contains the implementation of the Kalman filter, and [graph_function.R](), which provides functions for visualizing the filtered estimates. Both of the files are available in this repository.
 
 
 
+```r
+rm(list = ls())
 
+library(dplyr)
 
+KF.sond <- function(data, Sond){
+  
+  partiti <- unique(data$Partito)
+  KF.results <- list()
+  
+  for (j in seq_along(partiti)){
+    
+    risultato <- KF.part.sond(data, partito = partiti[j], sondaggista = Sond, confidence = T)
+    KF.results[[partiti[j]]] <- risultato
+    
+  }
+
+  return(KF.results)
+
+}
+
+source("filter_function.R")
+source("graph_function.R")
+```
 
 
 
