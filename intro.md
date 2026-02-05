@@ -1,6 +1,6 @@
 # Study of Statistical Reliability and Systematic Biases of Polling Organizations in the Italian political context
 
-This document outlines the underlying motivations and theoretical foundations of my thesis and then proceeds to quickly describe the main results obtained. The analysis shown here refers to the R script error_analysis.
+This document outlines the underlying motivations and theoretical foundations of my thesis.
 
 ## Motivations
 
