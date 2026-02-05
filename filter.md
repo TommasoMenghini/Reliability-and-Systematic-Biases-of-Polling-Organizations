@@ -64,6 +64,10 @@ KF.sond <- function(data, Sond){
 source("filter_function.R")
 source("graph_function.R")
 ```
+The chunk of code below imports a cleaned polling dataset and ensures the correct formatting of the time variable. Due to data access restrictions, the dataset is not publicly available and the code cannot be executed as-is.
 
-
+```r
+data <- read.csv("polls_cleaned.csv", header = T, sep = ",")
+data$Data <- as.Date(data$Data, format = "%Y-%m-%d")
+```
 
