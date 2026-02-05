@@ -71,3 +71,19 @@ data <- read.csv("polls_cleaned.csv", header = T, sep = ",")
 data$Data <- as.Date(data$Data, format = "%Y-%m-%d")
 ```
 
+The code below runs the Kalman filter for the SWG polling agency and extracts the corresponding visualization for the PD party in the first time interval from the resulting output object. The resulting graph is also shown. The red line represents the filtered estimate of voters’ intentions for the PD party over the first interval of interest for the SWG agency. The red dots correspond to the polls released by SWG during this period, while the blue dots indicate the election outcomes.
+
+During periods without observations, the filter relies exclusively on the forecasting dynamics of the model. When a new observation becomes available, however, the filter recalibrates its estimate, correcting any accumulated deviation. In this sense, the filter can be interpreted as learning from its past prediction errors.
+
+```r
+final.swg <- KF.sond(data, Sond = "swg")
+plt <- final.swg$PD$plots[[1]]
+```
+
+
+
+
+
+
+
+
