@@ -36,7 +36,7 @@ This chunk of code initializes a clean R session and loads the useful dplyr pack
 
 The function takes as input a dataset and the name of a polling agency. For each party present in the data, it calls the function KF.part.sond(), which performs the Kalman filter for a specific party–agency combination. The filtered results are stored in a list, with one element per party, and returned as output.
 
-Finally, the script sources two external R files: [filter_function.R](), which contains the implementation of the Kalman filter, and [graph_function.R](), which provides functions for visualizing the filtered estimates. Both of the files are available in this repository.
+Finally, the script sources two external R files: [filter_function.R](R/filter_function.R), which contains the implementation of the Kalman filter, and [graph_function.R](R/graph_function.R), which provides functions for visualizing the filtered estimates. Both of the files are available in this repository.
 
 
 
