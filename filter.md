@@ -24,7 +24,7 @@ It is assumed that, for each day t, there exists a real, yet unobserved, value o
 
 To address this issue, a binomial state-space model is implemented, in which voters' intentions evolve over time according to a local liner trend, as illustrated in the figure below.
 
-![Binomial state-space model](img/modello state space binomiale.png)
+![Binomial state-space model](img/modello_state_space_binomiale.png)
 
 Specifically the logit-transformed voters' intentions of tomorrow are modelled as the logit of today plus a random shock and an additional component that follows a random walk. This dynamic structure is flexible yet regual enough to allow for the imputation of days without polls by exploiting the information contained in the previous days.
 
