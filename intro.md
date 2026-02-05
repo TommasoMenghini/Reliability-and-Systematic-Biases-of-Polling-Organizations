@@ -45,7 +45,7 @@ The dataset therefore consists of this response variable and three independent v
 
 Using a single point of the time series - the last available point before the election - ignores the fact that voters' intentions evolve over time, particularly in the weeks leading up to the vote. As a result, a polling agency that detects an increasing or descreasing trend prior to the election may be penalized or favored simply because the final poll does not fully refect that trend. To mitigate these limitations, an alternative to the last pre-election pollis adopted: an estimate of the polling time series up to the day of the election, obtained using the Kalman Filter. This approach allows the information contained in the entire trajectory of polls to be incorporated in a coherent and systematic way.
 
-In the file []() is shown how to collect those estimates up to the day of the election, using the Kalman Filter.
+In the file [filter.md](filter.md) is shown how to collect those estimates up to the day of the election, using the Kalman Filter.
 
 ## The Error Analysis
 
