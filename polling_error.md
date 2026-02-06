@@ -66,15 +66,15 @@ m2 <- lm(rel_err2 ~ Partito * Elezione, data = dataset)
 
 </div>
 
-However from the visual analysis of the residuals emerges the possibility that some kind of heterosckedasticity is involved. 
+However, a visual inspection of the residuals suggests the possible presence of heteroskedasticity.
 
 ![Residuals vs Fitted](img/resid_fitted2.png)
 
-That is a problem, as the usual test, as the ones carried out with the ANOVA, can result as inappropriate, hence arriving at incorrect inferential conlusions. The solution is to make a Wald test on the two nested models `m1` and `m2`, while using an heterosckedasticity robust estimator of the var-cov matrix. There are different types of HCCM, the one it is used here is the following:
+This is problematic, as standard inferential procedures — such as those based on ANOVA — may become inappropriate, potentially leading to incorrect inferential conclusions. To address this issue, a Wald test is performed on the two nested models, `m1` and `m2`, using a heteroskedasticity-robust estimator of the variance–covariance matrix. Several types of heteroskedasticity-consistent covariance matrix (HCCM) estimators exist; the one employed here is the following:
 
 ![HCCM](img/stimatore_robusto_varianza.png)
 
-The null hypotesis is not rejected: the Agency variable does not significantly improve the fit of the model.
+The null hypothesis is not rejected: the Agency variable does not significantly improve the model fit. Therefore, this additional test corroborates the results obtained earlier.
 
 ```r
 waldtest(m2, m1, vcov = vcovHC(m1))
