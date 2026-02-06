@@ -80,7 +80,43 @@ The null hypothesis is not rejected: the Agency variable does not significantly 
 waldtest(m2, m1, vcov = vcovHC(m1))
 ```
 
+The quantities of interest are now the confidence intervals of the fitted values of the response variable for each Party–Election combination. The objective is to assess whether these fitted values are significantly different from zero. Specifically, if the 95% confidence interval for a given combination includes zero, there is no evidence of a systematic bias. In other words, this would suggest that polling firms tend to overestimate or underestimate the electoral outcome only by chance.
+
+Conversely, fitted values that are significantly different from zero would indicate the presence of a systematic bias, implying that for a specific combination of factors there exists a non-zero error in a particular direction.
+
+As in the previous analysis, correct inference requires appropriate adjustments for heteroskedasticity. In this case as well, the same heteroskedasticity-consistent covariance matrix (HCCM) estimator is employed.
+
+However, an additional issue arises: multiplicity. The probability of incorrectly rejecting the null hypothesis increases with the number of tests performed, and in this setting there are 15 tests, one for each Party–Election combination. Therefore, a correction for multiple testing is required. In this study, the Bonferroni correction is adopted, as it represents the simplest and most straightforward approach, although it is known to be conservative. Indeed, the reduction in the probability of Type I errors comes at the cost of an increased probability of Type II errors.
 
 
+```r
+# Forecasting for each party-election agency
+newdata <- expand.grid(
+  Partito = c("FDI", "FI", "LEGA", "M5S", "PD"),
+  Elezione = c("2019 Europee", "2022 Politiche", "2024 Europee")
+)
 
+m <- nrow(tab_naive) # Number of test that are made
+tab_bonf <- cbind(newdata, Predict(m2, newdata = newdata, level = 1 - alpha / m, interval = "confidence", vcov. = vcovHC(m2)))
+```
+
+
+Per quanto riguarda l’analisi basata sull’interpolazione dei sondaggi, il Movimento 5 Stelle risulta
+sistematicamente stimato in modo errato: sovrastimato nelle elezioni Europee del 2019, sottostimato
+nelle elezioni Politiche del 2022 e nuovamente sovrastimato nelle elezioni Europee del 2024.
+La Lega mostra un andamento speculare e contrario, risultando sottostimata nel 2019, fortemente
+sovrastimata nel 2022 e leggermente sottostimata nel 2024.
+Al contrario, Forza Italia non sembra risentire di distorsioni sistematiche: in tutte e tre le tornate
+elettorali considerate lo zero `e incluso negli intervalli di confidenza, per cui non vi `e evidenza sufficiente
+per rifiutare, al livello di confidenza α, l’ipotesi di assenza di una deviazione sistematica nella stima di
+questo partito da parte delle agenzie demoscopiche.
+Per Fratelli d’Italia emerge una tendenza a una stima schematicamente distorta in tutte e tre le
+elezioni, sebbene nel caso delle Politiche del 2022 l’intervallo di confidenza risulti prossimo allo zero.
+
+Per il Partito Democratico, invece, nell’elezione europea del 2019 l’intervallo di confidenza comprende lo
+zero, mentre nelle successive due tornate elettorali si osserva rispettivamente una sovrastima e una
+sottostima sistematiche.
+Vi `e evidenza della presenza di distorsioni sistematiche specifiche per partito ed elezione, e tali schemi
+non siano imputabili a scelte arbitrarie nella costruzione della misura di errore, ma riflettono
+caratteristiche strutturali della stima delle intenzioni di voto provenienti da sondaggi pre-elettorali.
 
