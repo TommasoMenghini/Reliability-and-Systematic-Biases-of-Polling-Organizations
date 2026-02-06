@@ -46,6 +46,8 @@ m1 <- lm(rel_err2 ~ Istituto + Partito * Elezione, data = dataset)
 ( tab1 <- anova(m1) )
 ```
 
+<div align="center">
+  
 | Term              | Df  | Sum Sq | Mean Sq | F value | Pr(>F)        |
 |-------------------|-----|--------|---------|---------|---------------|
 | Istituto          | 10  | 0.0418 | 0.00418 | 0.9234  | 0.5137        |
@@ -54,8 +56,7 @@ m1 <- lm(rel_err2 ~ Istituto + Partito * Elezione, data = dataset)
 | Partito:Elezione  | 8   | 4.2531 | 0.53163 | 117.3138| < 2·10⁻¹⁶     |
 | Residui           | 140 | 0.6344 | 0.00453 | —       | —             |
 
-
-
+</div>
 
 
 
