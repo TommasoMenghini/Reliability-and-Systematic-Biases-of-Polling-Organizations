@@ -50,6 +50,8 @@ In light of these results, it appears reasonable to fit a new linear model that 
 ```r
 m1 <- lm(rel_err2 ~ Istituto + Partito * Elezione, data = dataset)
 ( tab1 <- anova(m1) )
+
+m2 <- lm(rel_err2 ~ Partito * Elezione, data = dataset)
 ```
 
 <div align="center">
@@ -64,10 +66,19 @@ m1 <- lm(rel_err2 ~ Istituto + Partito * Elezione, data = dataset)
 
 </div>
 
+However from the visual analysis of the residuals emerges the possibility that some kind of heterosckedasticity is involved. 
 
+![Residuals vs Fitted](img/resid_fitted2.png)
 
+That is a problem, as the usual test, as the ones carried out with the ANOVA, can result as inappropriate, hence arriving at incorrect inferential conlusions. The solution is to make a Wald test on the two nested models `m1` and `m2`, while using an heterosckedasticity robust estimator of the var-cov matrix. There are different types of HCCM, the one it is used here is the following:
 
+![Residuals vs Fitted](img/resid_fitted2.png)
 
+The null hypotesis is not rejected: the Agency variable does not significantly improve the fit of the model.
+
+```r
+waldtest(m2, m1, vcov = vcovHC(m1))
+```
 
 
 
