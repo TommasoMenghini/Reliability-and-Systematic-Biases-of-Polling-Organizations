@@ -39,7 +39,13 @@ The image below shows the jointly conditioned boxplots of the response variable 
 
 ![Boxplot conditioned to independent variables Party and Election](img/boxplot_interaction.png)
 
+Hence, the following linear model is fitted and an ANOVA is performed. The analysis of variance allows for the assessment of the relative importance of the different sources of variation, namely the factors Agency, Party, Election, and their interaction.
 
+The ANOVA results are summarised in the table below. Focusing on the p-value column, the p-value associated with the Agency covariate is greater than the chosen significance threshold. This indicates that the polling agency does not contribute to explaining the variability of the response variable, and its inclusion in the model does not improve the model fit.
+
+In contrast, the p-values associated with Party and with the interaction term are extremely small. Therefore, the null hypothesis can be rejected, suggesting that these sources of variation play a relevant role in explaining the response variable.
+
+In light of these results, it appears reasonable to fit a new linear model that excludes the Agency variable.
 
 ```r
 m1 <- lm(rel_err2 ~ Istituto + Partito * Elezione, data = dataset)
