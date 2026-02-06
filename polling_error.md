@@ -31,8 +31,11 @@ dataset <- read.csv("polling_error2.csv", header = TRUE, stringsAsFactors = TRUE
 
 ## Presence of Systematic Biases
 
-The image below shows the conditioned boxplot of the response variable by the independent variable Agency. No clear pattern emerges, suggesting that polling agencies do not differ systematically in terms of relative error.
+The image below shows the conditioned boxplots of the response variable by the independent variable Agency. No clear pattern emerges, suggesting that polling agencies do not differ systematically in terms of relative error.
 
 ![Boxplot conditioned to independent variable Agency](img/boxplot_ist2.png)
 
+The image below shows the jointly conditioned boxplots of the response variable by the independent variables Party and Election. In this case, some patterns emerge, suggesting that these two factors may help explain the response variable. Moreover, the response varies differently across Party-Election combinations, suggesting the presence of an interaction between these factors. Therefore, an appropriate model should include an interaction term between Party and Election.
+
+![Boxplot conditioned to independent variables Party and Election](img/boxplot_interaction2.png)
 
