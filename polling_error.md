@@ -111,7 +111,7 @@ For Fratelli d’Italia, a tendency toward systematically biased estimates emerg
 
 Finally, for the Democratic Party (PD), the confidence interval includes zero in the 2019 European elections, while in the subsequent two electoral rounds a systematic overestimation and underestimation are observed, respectively.
 
-![Residuals vs Fitted](img/resid_fitted2.png)
+![Residuals vs Fitted](img/pair_range2.png)
 
 
 Overall, there is evidence of the presence of systematic distortions that are specific to party–election combinations. These patterns do not appear to be attributable to arbitrary choices in the construction of the error measure, but rather reflect structural features of the estimation of voting intentions derived from pre-electoral polling data.
