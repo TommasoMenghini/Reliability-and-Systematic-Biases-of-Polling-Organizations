@@ -72,7 +72,7 @@ However from the visual analysis of the residuals emerges the possibility that s
 
 That is a problem, as the usual test, as the ones carried out with the ANOVA, can result as inappropriate, hence arriving at incorrect inferential conlusions. The solution is to make a Wald test on the two nested models `m1` and `m2`, while using an heterosckedasticity robust estimator of the var-cov matrix. There are different types of HCCM, the one it is used here is the following:
 
-![Residuals vs Fitted](img/resid_fitted2.png)
+![HCCM](img/stimatore_robusto_varianza.png)
 
 The null hypotesis is not rejected: the Agency variable does not significantly improve the fit of the model.
 
