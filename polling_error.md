@@ -101,22 +101,18 @@ tab_bonf <- cbind(newdata, Predict(m2, newdata = newdata, level = 1 - alpha / m,
 ```
 
 
-Per quanto riguarda l’analisi basata sull’interpolazione dei sondaggi, il Movimento 5 Stelle risulta
-sistematicamente stimato in modo errato: sovrastimato nelle elezioni Europee del 2019, sottostimato
-nelle elezioni Politiche del 2022 e nuovamente sovrastimato nelle elezioni Europee del 2024.
-La Lega mostra un andamento speculare e contrario, risultando sottostimata nel 2019, fortemente
-sovrastimata nel 2022 e leggermente sottostimata nel 2024.
-Al contrario, Forza Italia non sembra risentire di distorsioni sistematiche: in tutte e tre le tornate
-elettorali considerate lo zero `e incluso negli intervalli di confidenza, per cui non vi `e evidenza sufficiente
-per rifiutare, al livello di confidenza α, l’ipotesi di assenza di una deviazione sistematica nella stima di
-questo partito da parte delle agenzie demoscopiche.
-Per Fratelli d’Italia emerge una tendenza a una stima schematicamente distorta in tutte e tre le
-elezioni, sebbene nel caso delle Politiche del 2022 l’intervallo di confidenza risulti prossimo allo zero.
+The figure below reports the estimated fitted values of the relative error and their robust and corrected confidence intervals for each Party–Election combination.
 
-Per il Partito Democratico, invece, nell’elezione europea del 2019 l’intervallo di confidenza comprende lo
-zero, mentre nelle successive due tornate elettorali si osserva rispettivamente una sovrastima e una
-sottostima sistematiche.
-Vi `e evidenza della presenza di distorsioni sistematiche specifiche per partito ed elezione, e tali schemi
-non siano imputabili a scelte arbitrarie nella costruzione della misura di errore, ma riflettono
-caratteristiche strutturali della stima delle intenzioni di voto provenienti da sondaggi pre-elettorali.
+M5S appears to be systematically misestimated across elections: it is overestimated in the 2019 European elections, underestimated in the 2022 general elections, and again overestimated in the 2024 European elections. Lega shows a specular and opposite pattern, being underestimated in 2019, strongly overestimated in 2022, and slightly underestimated in 2024.
+
+In contrast, Forza Italia does not appear to be affected by systematic distortions. In all three electoral rounds considered, the confidence intervals include zero; therefore, there is insufficient evidence to reject the null hypothesis of no systematic bias in the estimation of this party by polling agencies.
+
+For Fratelli d’Italia, a tendency toward systematically biased estimates emerges in all three elections, although in the case of the 2022 general elections the confidence interval is close to zero.
+
+Finally, for the Democratic Party (PD), the confidence interval includes zero in the 2019 European elections, while in the subsequent two electoral rounds a systematic overestimation and underestimation are observed, respectively.
+
+![Residuals vs Fitted](img/resid_fitted2.png)
+
+
+Overall, there is evidence of the presence of systematic distortions that are specific to party–election combinations. These patterns do not appear to be attributable to arbitrary choices in the construction of the error measure, but rather reflect structural features of the estimation of voting intentions derived from pre-electoral polling data.
 
