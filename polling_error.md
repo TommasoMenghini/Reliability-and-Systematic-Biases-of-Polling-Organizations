@@ -39,3 +39,30 @@ The image below shows the jointly conditioned boxplots of the response variable 
 
 ![Boxplot conditioned to independent variables Party and Election](img/boxplot_interaction.png)
 
+
+
+```r
+m1 <- lm(rel_err2 ~ Istituto + Partito * Elezione, data = dataset)
+( tab1 <- anova(m1) )
+```
+
+| Term              | Df  | Sum Sq | Mean Sq | F value | Pr(>F)        |
+|-------------------|-----|--------|---------|---------|---------------|
+| Istituto          | 10  | 0.0418 | 0.00418 | 0.9234  | 0.5137        |
+| Partito           | 4   | 0.7314 | 0.18286 | 40.3507 | < 2·10⁻¹⁶     |
+| Elezione          | 2   | 0.0211 | 0.01056 | 2.3306  | 0.1010        |
+| Partito:Elezione  | 8   | 4.2531 | 0.53163 | 117.3138| < 2·10⁻¹⁶     |
+| Residui           | 140 | 0.6344 | 0.00453 | —       | —             |
+
+
+
+
+
+
+
+
+
+
+
+
+
