@@ -37,5 +37,5 @@ The image below shows the conditioned boxplots of the response variable by the i
 
 The image below shows the jointly conditioned boxplots of the response variable by the independent variables Party and Election. In this case, some patterns emerge, suggesting that these two factors may help explain the response variable. Moreover, the response varies differently across Party-Election combinations, suggesting the presence of an interaction between these factors. Therefore, an appropriate model should include an interaction term between Party and Election.
 
-![Boxplot conditioned to independent variables Party and Election](img/boxplot_interaction2.png)
+![Boxplot conditioned to independent variables Party and Election](img/boxplot_interaction.png)
 
