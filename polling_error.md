@@ -31,23 +31,8 @@ dataset <- read.csv("polling_error2.csv", header = TRUE, stringsAsFactors = TRUE
 
 ## Presence of Systematic Biases
 
-```r
-boxplot_ist2 <- ggplot(data = dataset, aes(x = Istituto, y = rel_err2, fill = Istituto)) + 
-  geom_boxplot() +
-  scale_fill_tableau(palette = "Tableau 20") +
-  xlab(NULL) + 
-  ylab("Errore Relativo %") +
-  scale_y_continuous(labels = scales::percent, limits = c(-0.5, 0.5)) +
-  theme_light() +
-  theme(
-    text = element_text(size = 22),
-    axis.text = element_text(size = 16),
-    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
-    legend.position = "top",
-    legend.text  = element_text(size = 20),
-    legend.title = element_text(size = 30)) 
-```
+The image below shows the conditioned boxplot of the response variable by the independent variable Agency. No clear pattern emerges, suggesting that polling agencies do not differ systematically in terms of relative error.
 
-![Alt text](path/to/image.png)
+![Boxplot conditioned to independent variable Agency](img/boxplot_ist2.png)
 
 
