@@ -116,3 +116,39 @@ Finally, for the Democratic Party (PD), the confidence interval includes zero in
 
 Overall, there is evidence of the presence of systematic distortions that are specific to party–election combinations. These patterns do not appear to be attributable to arbitrary choices in the construction of the error measure, but rather reflect structural features of the estimation of voting intentions derived from pre-electoral polling data.
 
+## Cross-agency heterogeneity in polling reliability
+
+Now the focus shifts to the analysis of cross-agency heterogeneity in polling reliability. Previously a distinction was made between overestimation and underestimation; however, this distinction is now redundant and of secondary importance. The objective is instead to evaluate the overall accuracy of the estimates provided by the different agencies. For this reason, the absolute value of the relative error is considered: overestimates and underestimates of the same magnitude are treated equivalently.
+
+The preliminary graphical analysis mirrors that carried out in the section above. The same boxplots are considered, with the only difference that the response variable is now expressed in absolute terms. Despite this transformation, the qualitative conclusions remain unchanged. No systematic differences in overall reliability across polling agencies emerge, while clear systematic patterns associated with Party and Election persist, suggesting the relevance of including both factors and their interaction in the model. For brevity, these plots are not reported.
+
+Thus, two linear models are fitted. The first includes all available independent variables—Agency, Party, Election, and the interaction between the latter two—while the second excludes the Agency variable.
+
+```r
+m2 <- lm(abs(rel_err2) ~ Partito * Elezione, data = dataset)
+m3 <- lm(abs(rel_err2) ~ Istituto + Partito * Elezione, data = dataset)
+```
+
+The null hypothesis that Agency does not contribute to explaining the response variable is tested. As residual diagnostics indicate possible heteroskedasticity, a robust Wald test is employed, as done previously. The null hypothesis cannot be rejected, indicating that Agency is not statistically significant.
+
+```r
+library(lmtest)
+waldtest(m2, m3, vcov = vcovHC(m3))
+```
+
+Once political and electoral context is accounted for through the Party and Election variables and their interaction, no systematic differences in reliability across polling agencies emerge. Estimation errors in voting intention forecasts are not driven by the agency conducting the poll, but by the specific context in which the prediction is made.
+
+The key result is that the polling agencies considered in this analysis are essentially interchangeable in terms of reliability: conditional on the same information set and contextual factors, one agency is as reliable as another.
+
+## Conclusions
+
+To sum up these parties are estimated with a certain degree of error in each election, and this error is not specific to individual polling agencies but rather shared across them. This finding allows for a critique of the Poll of Polls approach. Aggregating polls does not eliminate this shared distortion, which persists even when averaging over a large number of observations. An aggregative model is only as reliable as the polls it is built upon: if all agencies are systematically biased in the same direction, aggregation will yield misleading results. Consequently, the Poll of Polls does not constitute a solution to the structural limitations of pre-election polling.
+
+This evidence is reported also in 
+
+One possible explanation, also carried out in  Polling agencies conducting and publishing electoral surveys face similar challenges and rely on comparable organizational structures and methodological approaches to address them.
+
+Consistent evidence is reported by Shirani-Mehr et al. (2018), who show that, in the U.S. context, polls referring to the same election tend to share a common systematic bias.
+
+
+
