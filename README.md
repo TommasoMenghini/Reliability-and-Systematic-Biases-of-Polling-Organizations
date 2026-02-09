@@ -7,11 +7,39 @@ The work is developed in the context of my master's dissertation and combines **
 
 ---
 
+## Repository structure
+
+The repository is organized as follows:
+
+### R scripts
+
+- **`R/filter.R`**  
+  Implements the state-space model and Kalman filter used to estimate latent voting intentions from polling data.
+
+- **`R/polling_error.R`**  
+  Computes polling distortions by comparing final pre-election polls with electoral outcomes and constructs the relative error measure.
+
+- **`R/graph.R`**  
+  Collection of auxiliary functions used across the analysis.
+
+### Documentation
+
+- **`intro.md`**  
+  Introduces the research question, motivation, and empirical setting of the analysis.
+
+- **`filter.md`**  
+  Provides a detailed description of the state-space model and the Kalman filtering approach.
+
+- **`polling_error.md`**  
+  Describes the construction of the polling error measure and the cross-sectional analysis of distortions.
+
+Each `.md` file alternates **theoretical explanations**, **methodological choices**, and selected **R code snippets**, following a tutorial-style layout.
+
+
 ## Project Overview
 
 Pre‑election polls are widely used to forecast electoral outcomes, yet they often exhibit systematic errors. These errors may not be independent across polling organizations, as agencies frequently rely on similar methodologies, assumptions, and data‑collection constraints.
 
-This project addresses the following research questions:
 The analysis focuses on Italian elections (European and Political) and multiple major polling agencies.
 
 ---
@@ -78,7 +106,7 @@ These findings are consistent with existing evidence in the literature, notably 
 
 ## Requirements
 
-The project is written in **R**. Required packages include:
+The project is written in **R** (4.3.3 Version). Required packages include:
 
 * `tidyverse`
 * `ggplot2`
@@ -96,5 +124,3 @@ The project is written in **R**. Required packages include:
 ## Author
 
 **Tommaso Menghini**
-
-If you have questions or suggestions, feel free to open an issue or contact me.
