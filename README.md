@@ -91,7 +91,8 @@ Due to data ownership restrictions, **neither the raw polling dataset nor the de
 * These errors are **not agency‑specific**, but largely **shared across polling organizations**.
 * As a consequence, simple aggregation strategies such as the *Poll of Polls* **do not eliminate systematic bias**.
   
-These findings are consistent with existing evidence in the literature, notably Shirani‑Mehr et al. (2018), highlighting common structural biases in polling.
+These findings are consistent with existing evidence in the literature, notably [Shirani-Mehr et al.(2018)](https://www.tandfonline.com/doi/full/10.1080/01621459.2018.1448823).
+, highlighting common structural biases in polling.
 
 ---
 
