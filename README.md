@@ -13,14 +13,17 @@ The repository is organized as follows:
 
 ### R scripts
 
-- **`R/filter.R`**  
+- **`R/filter_function.R`**  
+  Wrapper around the `KFS()` function used to estimate the latent voting intention process.
+
+- **`R/graph_function.R`**  
+  Function to visualize filtered estimates of voting intentions over time.
+
+- **`R/filter_results.R`**  
   Implements the state-space model and Kalman filter used to estimate latent voting intentions from polling data.
 
-- **`R/polling_error.R`**  
-  Computes polling distortions by comparing final pre-election polls with electoral outcomes and constructs the relative error measure.
-
-- **`R/graph.R`**  
-  Collection of auxiliary functions used across the analysis.
+- **`R/error_analysis.R`**  
+  Analyzes the reliability and systematic biases of polling organizations using polling error measures.
 
 ### Documentation
 
@@ -34,7 +37,6 @@ The repository is organized as follows:
   Describes the construction of the polling error measure and the cross-sectional analysis of distortions.
 
 Each `.md` file alternates **theoretical explanations**, **methodological choices**, and selected **R code snippets**, following a tutorial-style layout.
-
 
 ## Project Overview
 
@@ -60,22 +62,6 @@ The empirical strategy is structured around two complementary approaches:
 
 This framework allows the identification of persistent directional errors and common patterns across agencies.
 
----
-
-## Repository Structure
-
-```
-Reliability-and-Systematic-Biases-of-Polling-
-│
-├── data/              # Raw and cleaned polling and election data
-├── R/                 # R scripts (data cleaning, models, estimation)
-├── img/               # Figures and plots used in the analysis
-├── output/            # Tables, model outputs, and results
-├── README.md          # Project documentation
-```
-
----
-
 ## Data
 
 The dataset is composed of polling observations collected from multiple agencies, matched with official election results.
@@ -95,11 +81,10 @@ In total, the dataset includes **one observation for each agency–party–elect
 
 ## Main Findings
 
-* Several parties display **persistent over‑ or under‑estimation** across different elections.
+* Some parties display **persistent over‑ or under‑estimation** across different elections.
 * These errors are **not agency‑specific**, but largely **shared across polling organizations**.
 * As a consequence, simple aggregation strategies such as the *Poll of Polls* **do not eliminate systematic bias**.
-* Aggregated estimates remain vulnerable when all agencies are distorted in the same direction.
-
+  
 These findings are consistent with existing evidence in the literature, notably Shirani‑Mehr et al. (2018), highlighting common structural biases in polling.
 
 ---
