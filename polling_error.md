@@ -142,13 +142,8 @@ The key result is that the polling agencies considered in this analysis are esse
 
 ## Conclusions
 
-To sum up these parties are estimated with a certain degree of error in each election, and this error is not specific to individual polling agencies but rather shared across them. This finding allows for a critique of the Poll of Polls approach. Aggregating polls does not eliminate this shared distortion, which persists even when averaging over a large number of observations. An aggregative model is only as reliable as the polls it is built upon: if all agencies are systematically biased in the same direction, aggregation will yield misleading results. Consequently, the Poll of Polls does not constitute a solution to the structural limitations of pre-election polling.
+To sum up, parties are estimated with a certain degree of error in each election, and this error is not specific to individual polling agencies but rather shared across them. This finding allows for a critique of the Poll of Polls approach. Aggregating polls does not eliminate this shared distortion, which persists even when averaging over a large number of observations. An aggregative model is only as reliable as the polls it is built upon: if all agencies are systematically biased in the same direction, aggregation will yield misleading results. Consequently, the Poll of Polls does not constitute a solution to the structural limitations of pre-election polling.
 
-This evidence is reported also in 
+Similar evidence is also reported in [Shirani-Mehr et al.(2018)](https://www.tandfonline.com/doi/full/10.1080/01621459.2018.1448823), who show that, in the U.S. context, polls referring to the same election tend to share a common systematic bias.
 
-One possible explanation, also carried out in  Polling agencies conducting and publishing electoral surveys face similar challenges and rely on comparable organizational structures and methodological approaches to address them.
-
-Consistent evidence is reported by Shirani-Mehr et al. (2018), who show that, in the U.S. context, polls referring to the same election tend to share a common systematic bias.
-
-
-
+One possible explanation, also discussed in the cited paper, is that polling agencies conducting and publishing electoral surveys face similar challenges and rely on comparable organizational structures and methodological approaches to address them, thereby converging to similar results.
