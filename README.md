@@ -40,9 +40,7 @@ Each `.md` file alternates **theoretical explanations**, **methodological choice
 
 ## Project Overview
 
-Pre‑election polls are widely used to forecast electoral outcomes, yet they often exhibit systematic errors. These errors may not be independent across polling organizations, as agencies frequently rely on similar methodologies, assumptions, and data‑collection constraints.
-
-The analysis focuses on Italian elections (European and Political) and multiple major polling agencies.
+The study was developed along two parallel lines. The first one aimed to assess whether systematic biases in the voters' intentions based on pre-electoral polls exist. The second sought to identify potential structural differences in reliability among the polling agencies in Italy, exploring the possibility that some of them may be structurally more accurate in forecasting electoral outcomes.
 
 ---
 
@@ -58,6 +56,7 @@ The empirical strategy is structured around two complementary approaches:
 2. **Cross‑sectional analysis of polling errors**
 
    * For each election, agency, and party, the final poll prior to election day is compared with the actual electoral outcome.
+   * For each election, agency and party, the 
    * Distortions are measured as **relative errors**, ensuring comparability across parties with different vote shares.
 
 This framework allows the identification of persistent directional errors and common patterns across agencies.
