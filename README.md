@@ -56,25 +56,32 @@ The empirical strategy is structured around two complementary approaches:
 2. **Cross‑sectional analysis of polling errors**
 
    * For each election, agency, and party, the final poll prior to election day is compared with the actual electoral outcome.
-   * For each election, agency and party, the 
+   * For each election, agency and party, the estimate of the polling time series up to the day of the election is compared with the actual electoral outcome.
    * Distortions are measured as **relative errors**, ensuring comparability across parties with different vote shares.
 
 This framework allows the identification of persistent directional errors and common patterns across agencies.
 
 ## Data
 
-The dataset is composed of polling observations collected from multiple agencies, matched with official election results.
+The empirical analysis is based on two datasets.
 
-Key characteristics:
+The original dataset consists of **raw polling data** provided by *YouTrend*.  
+Each observation corresponds to a single poll and includes:
+- the polling organization conducting the survey,
+- the date of fieldwork,
+- the sample size,
+- estimated vote shares for a set of political parties.
 
-* **Response variable**: relative error between the final pre‑election poll and the electoral outcome
-* **Explanatory variables**:
+From this source, a second **analysis dataset** is constructed.  
+This dataset aggregates information at the **agency–party–election** level and contains **165 observations**, one for each combination of polling organization, political party, and election.
 
-  * Polling agency
-  * Political party
-  * Election (year and type)
+The response variable is the **relative polling error**, defined as previously mentioned.  
+Explanatory variables include:
+- polling agency,
+- political party,
+- election.
 
-In total, the dataset includes **one observation for each agency–party–election combination**.
+Due to data ownership restrictions, **neither the raw polling dataset nor the derived analysis dataset is publicly available in this repository**.
 
 ---
 
